@@ -5,7 +5,11 @@ import { fetchBundles } from "@/lib/api/get-bundles";
 import { fetchAllBundleDetails } from "@/lib/api/get-all-bundles-details";
 
 export default async function CreateOrder() {
-  const bundles = await fetchBundles();
+  // const bundles = await fetchBundles();
+  const bundles = {
+    data: [],
+    total: 0,
+  };
   //   const allBundleDetails = await fetchAllBundleDetails();
   //   console.log(allBundleDetails);
   return (
