@@ -1,5 +1,4 @@
 "use client";
-import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -50,7 +49,6 @@ export default function CreateOrderForm({ bundles }: CreateOrderFormProps) {
       console.log(values);
     } catch (error) {
       console.error("Form submission error", error);
-      toast.error("Failed to submit the form. Please try again.");
     }
   }
 

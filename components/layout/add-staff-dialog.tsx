@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -31,12 +30,8 @@ export default function AddStaffDialog() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       console.log(values);
-      toast.success("Thêm nhân viên thành công");
       router.push("/staff");
-    } catch (error) {
-      console.error("Form submission error", error);
-      toast.error("Failed to submit the form. Please try again.");
-    }
+    } catch (error) {}
   }
 
   return (
